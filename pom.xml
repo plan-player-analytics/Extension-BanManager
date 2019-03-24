@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.djrapitops</groupId>
-    <artifactId>Extension-AdvancedBan</artifactId>
-    <version>2.1.5-R0.3</version>
+    <artifactId>Extension-BanManager</artifactId>
+    <version>5.15.0-R0.1</version>
     <build>
         <plugins>
             <plugin>
@@ -50,14 +50,14 @@
         <dependency> <!-- Plan API -->
             <groupId>com.djrapitops</groupId>
             <artifactId>Plan-api</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>me.leoko</groupId>
-            <artifactId>advancedban</artifactId>
-            <version>2.1.5</version>
+            <groupId>me.confuser</groupId>
+            <artifactId>banmanager</artifactId>
+            <version>5.15.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -108,7 +108,7 @@
         <repository>
             <id>bintray-rsl1122-Plan-repository</id>
             <name>rsl1122-Plan-repository</name>
-            <url>https://api.bintray.com/maven/rsl1122/Plan-repository/Extension-AdvancedBan/;publish=1</url>
+            <url>https://api.bintray.com/maven/rsl1122/Plan-repository/Extension-BanManager/;publish=1</url>
         </repository>
     </distributionManagement>
 </project>

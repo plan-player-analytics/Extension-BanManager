@@ -39,7 +39,7 @@ class ExtensionImplementationTest {
 
     @BeforeEach
     void prepareExtractor() {
-        DataExtension extension = new AdvancedBanExtension();
+        DataExtension extension = new BanManagerExtension();
         extractor = new ExtensionExtractor(extension);
     }
 

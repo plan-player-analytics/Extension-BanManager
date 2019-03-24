@@ -31,11 +31,11 @@ import java.util.Optional;
  *
  * @author Rsl1122
  */
-public class AdvancedBanExtensionFactory {
+public class BanManagerExtensionFactory {
 
     private boolean isAvailable() {
         try {
-            Class.forName("me.leoko.advancedban.Universal");
+            Class.forName("me.confuser.banmanager.BanManager");
             return true;
         } catch (ClassNotFoundException e) {
             return false;
@@ -44,7 +44,7 @@ public class AdvancedBanExtensionFactory {
 
     public Optional<DataExtension> createExtension() {
         if (isAvailable()) {
-            return Optional.of(new AdvancedBanExtension());
+            return Optional.of(new BanManagerExtension());
         }
         return Optional.empty();
     }
