@@ -6,7 +6,7 @@
 
     <groupId>com.djrapitops</groupId>
     <artifactId>Extension-BanManager</artifactId>
-    <version>5.15.0-R0.1</version>
+    <version>5.15.0-R0.2</version>
     <build>
         <plugins>
             <plugin>
@@ -67,6 +67,7 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.12.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <!--<dependency>-->
         <!--<groupId>org.spongepowered</groupId>-->
