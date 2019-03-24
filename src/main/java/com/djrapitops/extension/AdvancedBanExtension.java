@@ -138,7 +138,7 @@ public class AdvancedBanExtension implements DataExtension {
             priority = 50,
             conditionName = "muted",
             iconName = "gavel",
-            iconColor = Color.RED
+            iconColor = Color.DEEP_ORANGE
     )
     public boolean isMuted(UUID playerUUID) {
         return PunishmentManager.get().isMuted(abUUID(playerUUID));
@@ -148,9 +148,9 @@ public class AdvancedBanExtension implements DataExtension {
     @StringProvider(
             text = "Operator",
             description = "Who muted the player",
-            priority = 99,
+            priority = 49,
             iconName = "user",
-            iconColor = Color.RED,
+            iconColor = Color.DEEP_ORANGE,
             playerName = true
     )
     public String muteIssuer(UUID playerUUID) {
@@ -161,10 +161,10 @@ public class AdvancedBanExtension implements DataExtension {
     @NumberProvider(
             text = "Date",
             description = "When the mute was issued",
-            priority = 98,
+            priority = 48,
             iconName = "calendar",
             iconFamily = Family.REGULAR,
-            iconColor = Color.RED,
+            iconColor = Color.DEEP_ORANGE,
             format = FormatType.DATE_YEAR
     )
     public long muteIssueDate(UUID playerUUID) {
@@ -175,11 +175,11 @@ public class AdvancedBanExtension implements DataExtension {
     @BooleanProvider(
             text = "Will Expire",
             description = "Is the mute permanent",
-            priority = 97,
+            priority = 47,
             conditionName = "mute_expires",
             iconName = "calendar-check",
             iconFamily = Family.REGULAR,
-            iconColor = Color.RED
+            iconColor = Color.DEEP_ORANGE
     )
     public boolean muteWillExpire(UUID playerUUID) {
         PunishmentType type = PunishmentManager.get().getMute(abUUID(playerUUID)).getType();
@@ -192,10 +192,10 @@ public class AdvancedBanExtension implements DataExtension {
     @NumberProvider(
             text = "Ends",
             description = "When the mute expires",
-            priority = 96,
+            priority = 46,
             iconName = "calendar-check",
             iconFamily = Family.REGULAR,
-            iconColor = Color.RED,
+            iconColor = Color.DEEP_ORANGE,
             format = FormatType.DATE_YEAR
     )
     public long muteExpireDate(UUID playerUUID) {
@@ -206,10 +206,10 @@ public class AdvancedBanExtension implements DataExtension {
     @StringProvider(
             text = "Reason",
             description = "Why the mute was issued",
-            priority = 95,
+            priority = 45,
             iconName = "comment",
             iconFamily = Family.REGULAR,
-            iconColor = Color.RED
+            iconColor = Color.DEEP_ORANGE
     )
     public String muteReason(UUID playerUUID) {
         return PunishmentManager.get().getMute(abUUID(playerUUID)).getReason();
@@ -220,7 +220,7 @@ public class AdvancedBanExtension implements DataExtension {
             description = "How many unexpired warnings player has on AdvancedBan",
             priority = 25,
             iconName = "flag",
-            iconColor = Color.YELLOW
+            iconColor = Color.AMBER
     )
     public long warnings(UUID playerUUID) {
         return PunishmentManager.get().getWarns(abUUID(playerUUID))
