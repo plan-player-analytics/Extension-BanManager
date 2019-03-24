@@ -137,7 +137,7 @@ public class AdvancedBanExtension implements DataExtension {
             description = "Is the player muted on AdvancedBan",
             priority = 50,
             conditionName = "muted",
-            iconName = "gavel",
+            iconName = "bell-slash",
             iconColor = Color.DEEP_ORANGE
     )
     public boolean isMuted(UUID playerUUID) {
