@@ -40,7 +40,7 @@ import java.util.UUID;
  *
  * @author Rsl1122
  */
-@PluginInfo(name = "BanManager", iconName = "gavel", iconFamily = Family.SOLID, color = Color.BROWN)
+@PluginInfo(name = "BanManager", iconName = "gavel", iconFamily = Family.SOLID, color = Color.BROWN, updatePlayerDataOnLeave = true)
 public class BanManagerExtension implements DataExtension {
 
     public BanManagerExtension() {
@@ -93,7 +93,7 @@ public class BanManagerExtension implements DataExtension {
         return getCurrentBan(playerUUID).getCreated();
     }
 
-
+    @Conditional("banned")
     @NumberProvider(
             text = "Ends",
             description = "When the ban expires",
@@ -163,6 +163,7 @@ public class BanManagerExtension implements DataExtension {
         return getCurrentMute(playerUUID).getCreated();
     }
 
+    @Conditional("muted")
     @NumberProvider(
             text = "Ends",
             description = "When the mute expires",
