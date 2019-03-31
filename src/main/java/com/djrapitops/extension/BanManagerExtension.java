@@ -22,6 +22,7 @@
 */
 package com.djrapitops.extension;
 
+import com.djrapitops.plan.extension.CallEvents;
 import com.djrapitops.plan.extension.DataExtension;
 import com.djrapitops.plan.extension.FormatType;
 import com.djrapitops.plan.extension.annotation.*;
@@ -40,14 +41,17 @@ import java.util.UUID;
  *
  * @author Rsl1122
  */
-@PluginInfo(name = "BanManager", iconName = "gavel", iconFamily = Family.SOLID, color = Color.BROWN, updatePlayerDataOnLeave = true)
+@PluginInfo(name = "BanManager", iconName = "gavel", iconFamily = Family.SOLID, color = Color.BROWN)
 public class BanManagerExtension implements DataExtension {
 
     public BanManagerExtension() {
     }
 
-    private String abUUID(UUID uuid) {
-        return uuid.toString().replace("-", "");
+    @Override
+    public CallEvents[] callExtensionMethodsOn() {
+        return new CallEvents[]{
+                CallEvents.PLAYER_JOIN, CallEvents.PLAYER_JOIN
+        };
     }
 
     @BooleanProvider(
