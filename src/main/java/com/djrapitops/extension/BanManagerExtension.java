@@ -50,7 +50,7 @@ public class BanManagerExtension implements DataExtension {
     @Override
     public CallEvents[] callExtensionMethodsOn() {
         return new CallEvents[]{
-                CallEvents.PLAYER_JOIN, CallEvents.PLAYER_JOIN
+                CallEvents.PLAYER_JOIN, CallEvents.PLAYER_LEAVE
         };
     }
 
