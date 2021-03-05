@@ -35,7 +35,7 @@ public class BanManagerExtensionFactory {
 
     private boolean isAvailable() {
         try {
-            Class.forName("me.confuser.banmanager.BanManager");
+            Class.forName("me.confuser.banmanager.common.api.BmAPI");
             return true;
         } catch (ClassNotFoundException e) {
             return false;

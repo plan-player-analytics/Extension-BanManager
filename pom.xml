@@ -6,7 +6,7 @@
 
     <groupId>com.djrapitops</groupId>
     <artifactId>Extension-BanManager</artifactId>
-    <version>5.15.0-R0.5</version>
+    <version>7.3.1-R0.1</version>
     <build>
         <plugins>
             <plugin>
@@ -22,8 +22,8 @@
 
     <repositories>
         <repository>
-            <id>plan-bintray</id>
-            <url>https://dl.bintray.com/rsl1122/Plan-repository/</url>
+            <id>confuser-repo</id>
+            <url>https://ci.frostcast.net/plugin/repository/everything</url>
         </repository>
 
         <!-- Platforms -->
@@ -32,10 +32,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-        <!--<repository>-->
-        <!--<id>sponge-repo</id>-->
-        <!--<url>https://repo.spongepowered.org/maven</url>-->
-        <!--</repository>-->
+        <repository>
+            <id>sponge-repo</id>
+            <url>https://repo.spongepowered.org/maven</url>
+        </repository>
         <!--<repository>-->
         <!--<id>bungeecord-repo</id>-->
         <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
@@ -44,23 +44,38 @@
         <!--<id>velocity-repo</id>-->
         <!--<url>https://repo.velocitypowered.com/snapshots/</url>-->
         <!--</repository>-->
+        <repository>
+            <id>plan-repo</id>
+            <url>https://repo.playeranalytics.net/releases</url>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency> <!-- Plan API -->
             <groupId>com.djrapitops</groupId>
-            <artifactId>Plan-api</artifactId>
-            <version>0.0.5</version>
+            <artifactId>plan-api</artifactId>
+            <version>5.2-R0.1</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>me.confuser</groupId>
-            <artifactId>banmanager</artifactId>
-            <version>5.15.0</version>
+            <groupId>me.confuser.banmanager</groupId>
+            <artifactId>BanManagerCommon</artifactId>
+            <version>7.3.1</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>me.confuser.banmanager</groupId>
+            <artifactId>BanManagerBukkit</artifactId>
+            <version>7.3.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.confuser.banmanager</groupId>
+            <artifactId>BanManagerSponge</artifactId>
+            <version>7.3.1</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Platforms -->
 
         <dependency>
@@ -69,11 +84,11 @@
             <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.spongepowered</groupId>-->
-        <!--<artifactId>spongeapi</artifactId>-->
-        <!--<version>7.1.0</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.spongepowered</groupId>
+            <artifactId>spongeapi</artifactId>
+            <version>7.1.0</version>
+        </dependency>
         <!--<dependency>-->
         <!--<groupId>net.md-5</groupId>-->
         <!--<artifactId>bungeecord-api</artifactId>-->
@@ -107,9 +122,8 @@
 
     <distributionManagement>
         <repository>
-            <id>bintray-rsl1122-Plan-repository</id>
-            <name>rsl1122-Plan-repository</name>
-            <url>https://api.bintray.com/maven/rsl1122/Plan-repository/Extension-BanManager/;publish=1</url>
+            <id>plan-repo</id>
+            <url>https://repo.playeranalytics.net/releases</url>
         </repository>
     </distributionManagement>
 </project>

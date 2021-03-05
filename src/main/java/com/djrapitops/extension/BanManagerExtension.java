@@ -28,9 +28,9 @@ import com.djrapitops.plan.extension.FormatType;
 import com.djrapitops.plan.extension.annotation.*;
 import com.djrapitops.plan.extension.icon.Color;
 import com.djrapitops.plan.extension.icon.Family;
-import me.confuser.banmanager.BmAPI;
-import me.confuser.banmanager.data.PlayerBanData;
-import me.confuser.banmanager.data.PlayerMuteData;
+import me.confuser.banmanager.common.api.BmAPI;
+import me.confuser.banmanager.common.data.PlayerBanData;
+import me.confuser.banmanager.common.data.PlayerMuteData;
 
 import java.util.UUID;
 
